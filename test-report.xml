@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="D:\Prabha\Datamatics\ADB\adb-web\src\store\reducers\testReducer\testReducer.test.ts">
+    <testCase name="should return the initial state" duration="6"/>
+    <testCase name="should update the isLoading property to true in state value" duration="1"/>
+  </file>
+  <file path="D:\Prabha\Datamatics\ADB\adb-web\src\store\actions\index.test.ts">
+    <testCase name="should return the test action type" duration="112"/>
+  </file>
+  <file path="D:\Prabha\Datamatics\ADB\adb-web\src\utilities\storage\storageUtility.test.ts">
+    <testCase name="utilities  function utilities  function test should set an item in local storage" duration="40"/>
+    <testCase name="utilities  function utilities  function test should return null for non existing items" duration="1"/>
+    <testCase name="utilities  function utilities  function test should set and remove Item" duration="2"/>
+  </file>
+  <file path="D:\Prabha\Datamatics\ADB\adb-web\src\app\atoms\Button\index.test.tsx">
+    <testCase name="&lt;ADBButton /&gt; Expects to add a button in to the DOM" duration="104"/>
+    <testCase name="&lt;ADBButton /&gt; Check the length of the DOM" duration="3"/>
+    <testCase name="&lt;ADBButton /&gt; Expects to find button HTML element with className test in the DOM" duration="212"/>
+  </file>
+  <file path="D:\Prabha\Datamatics\ADB\adb-web\src\app\atoms\TextInput\index.test.tsx">
+    <testCase name="Input Component Tests Expects to add input in to the DOM" duration="71"/>
+    <testCase name="Input Component Tests Check the length of the DOM" duration="3"/>
+    <testCase name="Input Component Tests should check the value from input box" duration="185"/>
+    <testCase name="Input Component Tests should check Input box name and ID" duration="14"/>
+    <testCase name="Input Component Tests should check empty Input box name and ID" duration="8"/>
+    <testCase name="Input Component Tests should check the placeholder from input box" duration="9"/>
+    <testCase name="Input Component Tests should check empty placeholder from input box" duration="12"/>
+    <testCase name="Input Component Tests Expects to find button HTML element with className test in the DOM" duration="13"/>
+    <testCase name="Input Component Tests Expects to see the input type password" duration="11"/>
+    <testCase name="Input Component Tests Expects to see the input type text" duration="13"/>
+  </file>
+  <file path="D:\Prabha\Datamatics\ADB\adb-web\src\app\components\Login\index.test.tsx">
+    <testCase name="Login Component should render with given state from Redux store" duration="269"/>
+  </file>
+  <file path="D:\Prabha\Datamatics\ADB\adb-web\src\app\atoms\CheckBox\index.test.tsx">
+    <testCase name="Checkbox Component Tests Expects to add a checkbox in to the DOM" duration="56"/>
+    <testCase name="Checkbox Component Tests Check the length of the DOM" duration="2"/>
+    <testCase name="Checkbox Component Tests Expects to find Checkbox HTML element in the DOM" duration="138"/>
+    <testCase name="Checkbox Component Tests check the box" duration="20"/>
+  </file>
+</testExecutions>

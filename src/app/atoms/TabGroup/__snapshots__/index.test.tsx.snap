@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabGroup TabGroup snapshot should take TabGroup snapshot 1`] = `
+<Fragment>
+  <WithStyles(ForwardRef(Paper))
+    className="makeStyles-paper-1"
+  >
+    <WithStyles(ForwardRef(Tabs))
+      TabIndicatorProps={
+        Object {
+          "style": Object {
+            "backgroundColor": "#c7222a",
+          },
+        }
+      }
+      aria-label="tab-group"
+      centered={true}
+      onChange={[Function]}
+      scrollButtons="on"
+      textColor="primary"
+      value={0}
+    />
+  </WithStyles(ForwardRef(Paper))>
+</Fragment>
+`;

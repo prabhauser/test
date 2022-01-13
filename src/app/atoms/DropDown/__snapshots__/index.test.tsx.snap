@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DropDown DropDown snapshot should take DropDown snapshot 1`] = `
+<div
+  className="makeStyles-paper-3 "
+  id="parent"
+>
+  <WithStyles(ForwardRef(FormControl))
+    className="makeStyles-formControl-1  makeStyles-inputStyleWithouIcon-8"
+    fullWidth={true}
+  >
+    <WithStyles(ForwardRef(InputLabel))
+      classes={
+        Object {
+          "root": "makeStyles-labelStyle-9",
+        }
+      }
+      id="select-label"
+    >
+      test
+    </WithStyles(ForwardRef(InputLabel))>
+    <WithStyles(ForwardRef(Select))
+      MenuProps={
+        Object {
+          "anchorOrigin": Object {
+            "horizontal": "left",
+            "vertical": "bottom",
+          },
+          "classes": Object {
+            "paper": "makeStyles-dropdownStyle-4",
+          },
+          "getContentAnchorEl": null,
+        }
+      }
+      classes={
+        Object {
+          "disabled": "",
+        }
+      }
+      name="test"
+      onChange={[Function]}
+      startAdornment={false}
+    />
+  </WithStyles(ForwardRef(FormControl))>
+</div>
+`;

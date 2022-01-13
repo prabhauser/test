@@ -1,0 +1,23 @@
+@import './variables.scss';
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Poppins';
+}
+
+.app-container {
+    display: flex;
+}
+.bluedeep {
+    color: $blue_deep;
+}
+.graylabel {
+    color: $gray_label;
+}
+.mar-0 {
+    margin: 0;
+}
+.pad-0 {
+    padding: 0;
+}

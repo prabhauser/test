@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Component should render with given state from Redux store 1`] = `
+<div>
+  <div>
+    Test Form Login
+    <form
+      action="#"
+      onReset={[Function]}
+      onSubmit={[Function]}
+    >
+      <div>
+        <div
+          className="
+        makeStyles-root-1
+        "
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root  makeStyles-inputWithouticon-2"
+          >
+            <div
+              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiInput-input"
+                disabled={false}
+                name="userName"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={false}
+                required={false}
+                type="text"
+                value=""
+              />
+            </div>
+            
+          </div>
+        </div>
+        <div>
+          <div
+            className="
+        makeStyles-root-1
+        "
+          >
+            <div
+              className="MuiFormControl-root MuiTextField-root  makeStyles-inputWithouticon-2"
+            >
+              <div
+                className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+                onClick={[Function]}
+              >
+                <input
+                  aria-invalid={false}
+                  autoFocus={false}
+                  className="MuiInputBase-input MuiInput-input"
+                  disabled={false}
+                  name="password"
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  readOnly={false}
+                  required={false}
+                  type="password"
+                  value=""
+                />
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <label
+              className="MuiFormControlLabel-root"
+            >
+              <span
+                aria-disabled={false}
+                className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-9 MuiCheckbox-root MuiCheckbox-colorSecondary PrivateSwitchBase-checked-10 Mui-checked MuiIconButton-colorSecondary"
+                onBlur={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={null}
+              >
+                <span
+                  className="MuiIconButton-label"
+                >
+                  <input
+                    checked={true}
+                    className="PrivateSwitchBase-input-12"
+                    data-indeterminate={false}
+                    disabled={false}
+                    name="subscribe"
+                    onChange={[Function]}
+                    type="checkbox"
+                    value={true}
+                  />
+                  <svg
+                    aria-hidden={true}
+                    className="MuiSvgIcon-root"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                    />
+                  </svg>
+                </span>
+              </span>
+              <span
+                className="MuiTypography-root MuiFormControlLabel-label makeStyles-bold-7 MuiTypography-body1"
+              />
+            </label>
+          </div>
+        </div>
+        <div>
+          <button
+            className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-root-13 makeStyles-primaryButton-14 undefined"
+            disabled={false}
+            name="Login"
+            onBlur={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="submit"
+          >
+            <span
+              className="MuiButton-label"
+            >
+              Login
+            </span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <button
+    onClick={[Function]}
+  >
+    Login
+  </button>
+</div>
+`;

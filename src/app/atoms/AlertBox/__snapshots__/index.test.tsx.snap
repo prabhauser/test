@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AlertBox AlertBox snapshot should take AlertBox snapshot 1`] = `
+<div>
+  <WithStyles(ForwardRef(Dialog))
+    aria-labelledby="customized-dialog-title"
+    onClose={[Function]}
+    open={false}
+  >
+    <DialogTitle
+      id="customized-dialog-title"
+      onClose={[Function]}
+    />
+    <WithStyles(WithStyles(ForwardRef(DialogContent)))
+      dividers={true}
+    >
+      <WithStyles(ForwardRef(Typography))
+        gutterBottom={true}
+      />
+    </WithStyles(WithStyles(ForwardRef(DialogContent)))>
+    <WithStyles(WithStyles(ForwardRef(DialogActions))) />
+  </WithStyles(ForwardRef(Dialog))>
+</div>
+`;
