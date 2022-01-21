@@ -2,6 +2,7 @@ import { HashRouter } from 'react-router-dom';
 import PublicRoutes from './PublicRoutes';
 import PrivateRoute from './PrivateRoute';
 import ProtectedRoutes from './ProtectedRoutes';
+import './index.scss';
 
 const Router = () => {
     return (

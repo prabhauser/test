@@ -7,7 +7,7 @@ import VisibilityIcon from '../../../assets/images/visibility.svg';
 import VisibilityOffIcon from '../../../assets/images/visibilityoff.svg';
 import PersonIcon from '../../../assets/images/person.svg';
 import PasswordLockIcon from '../../../assets/images/password_lock.svg';
-import Logo from '../../../assets/images/dswd_logo_new.png';
+import Logo from '../../../assets/images/dswd_logo_login.png';
 import Flag from '../../../assets/images/Bitmap.png';
 import Label from '../../atoms/Label/index';
 import TextInput from '../../atoms/TextInput/index';
@@ -70,6 +70,7 @@ const Login = (props: LoginProps) => {
     const { isLoggedIn, loginError } = props;
     const [showPassword, setShowPassword] = useState(false);
     const [snackbarOptions, setSnackbarOptions] = useState(options.DEFAULT);
+    const [disableLogin, setDisableLogin] = useState(true);
     const history = useHistory();
     const [validationSchema, setValidationSchema] = useState({});
     const [initialValues] = useState({
@@ -101,15 +102,23 @@ const Login = (props: LoginProps) => {
         setShowPassword((prev) => !prev);
     };
 
-    const handleSubmit = async (values: LoginFormType) => {
-        await props.loginReset();
-        const reqObj = {
-            userName: values?.userName,
-            password: values?.password,
-            isPasswordEncrypted: false,
-            isSkipAdAuth: true
-        };
-        props.userLogin(reqObj);
+    // const handleSubmit = async (values: LoginFormType) => {
+    //     await props.loginReset();
+    //     const reqObj = {
+    //         userName: values?.userName,
+    //         password: values?.password,
+    //         isPasswordEncrypted: false,
+    //         isSkipAdAuth: true
+    //     };
+    //     props.userLogin(reqObj);
+    // };
+
+    //remove this code
+    const handleSubmit = (values: LoginFormType) => {
+        const roleCode = 'R02';
+        setToLocalStorage('userRole', roleCode);
+        const dashboardPage = Object.values(roles)?.find((element) => element?.roleCode === roleCode)?.homepage;
+        history.push(`/${dashboardPage || 'dashboard'}`);
     };
 
     const handleSnackbarError = (err: any) => {
@@ -135,7 +144,7 @@ const Login = (props: LoginProps) => {
             <SnackbarAlert className="login-snackbar" options={snackbarOptions} handleClose={closeSnackbar} />
             <div className="row mar-0">
                 <div
-                    className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 pad-0"
+                    className="login-left col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 pad-0"
                     style={{
                         backgroundImage: `url(${Flag})`,
                         backgroundPosition: 'center center',
@@ -148,8 +157,8 @@ const Login = (props: LoginProps) => {
                 <div className=" col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 pad-0">
                     <div className="d-flex flex-column ">
                         <div className=" login-container">
-                            <div className="login-heading gray_label">Login</div>
-                            <div className="login-headingdetail gray_label">Please login with below credentials</div>
+                            <div className="login-heading graylabel">Login</div>
+                            <div className="login-headingdetail graylabel">Please login with below credentials</div>
                             <Formik
                                 initialValues={initialValues}
                                 validationSchema={validationSchema}
@@ -158,7 +167,7 @@ const Login = (props: LoginProps) => {
                                 }}
                             >
                                 {(formikprops: FormikProps<LoginFormType>) => {
-                                    const { values, isValid, handleChange, errors, touched } = formikprops;
+                                    const { values, isValid, handleChange, handleBlur, errors, touched } = formikprops;
                                     return (
                                         <Form>
                                             <div>
@@ -176,9 +185,14 @@ const Login = (props: LoginProps) => {
                                                             <img src={PersonIcon} />
                                                         </IconButton>
                                                     }
-                                                    onChange={handleChange}
+                                                    onChange={(e) => {
+                                                        setDisableLogin(false);
+                                                        handleChange(e);
+                                                    }}
+                                                    onBlur={handleBlur}
                                                     helperText={
                                                         errors.userName && touched.userName ? errors.userName : ''
+                                                        //errors.userName ? errors.userName : ''
                                                     }
                                                 />
                                                 <Label className={'password-class'} label={'Password'} />
@@ -203,19 +217,25 @@ const Login = (props: LoginProps) => {
                                                         </IconButton>
                                                     }
                                                     value={values.password}
-                                                    onChange={handleChange}
+                                                    onChange={(e) => {
+                                                        setDisableLogin(false);
+                                                        handleChange(e);
+                                                    }}
+                                                    onBlur={handleBlur}
                                                     helperText={
                                                         errors.password && touched.password ? errors.password : ''
+                                                        //errors.password ? errors.password : ''
                                                     }
                                                 />
                                                 <Button
                                                     formInput={classes.loginButtonAlign}
                                                     fullWidth={true}
                                                     name="Login"
-                                                    disabled={!isValid}
+                                                    disabled={disableLogin || !isValid}
                                                     type="submit"
+                                                    variant="contained"
                                                 />
-                                                <div className="d-flex row no-gutters align-items-center login-footer">
+                                                <div className="d-flex row no-gutters align-items-center login-footer graylabel">
                                                     <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 pad-0 footer-copyrights">
                                                         Copyright © 2021 DSWD. All rights reserved.
                                                     </div>

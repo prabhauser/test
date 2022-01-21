@@ -1,41 +1,54 @@
 import { useState } from 'react';
-import ButtonTabs from '../../atoms/ButtonTabs/index';
-import { ADMIN_TABS } from './tabs';
-import MunicipalLinks from './MunicipalLinks';
-import Supervisors from './Supervisors/index';
+import { Container } from '@material-ui/core';
+import DashboardHeader from '../Header/index';
+import TabGroup from '../../atoms/TabGroup';
+import { getTabsForUser } from '../Dashboard/helper';
+import { getFromLocalStorage } from '../../../utilities/storage/storageUtility';
+import { HEADER_TABS } from '../../constants/permissions';
+import HomeTab from '../Dashboard/Home';
+import Reports from '../Dashboard/Reports';
 
-const AdminDashboard = () => {
+const Dashboard = () => {
     const [currTab, setCurrTab] = useState(0);
-    const tabsArray = ADMIN_TABS;
-
-    const navigateTab = () => {
-        switch (currTab) {
-            case 0:
-                return <Supervisors />;
-            case 1:
-                return <MunicipalLinks />;
-
-            case 2:
-                return <Supervisors />;
-
-            case 3:
-                return <MunicipalLinks />;
-            case 4:
-                return <Supervisors />;
-            case 5:
-                return <MunicipalLinks />;
-            default:
-                return <Supervisors />;
-        }
+    const handleTabChange = (tabIndex: number) => {
+        setCurrTab(tabIndex);
     };
-    return (
-        <>
-            <div className="pad-cont-10">
-                <ButtonTabs tabsArray={tabsArray} selectedTab={currTab} setSelectedTab={setCurrTab} />
+
+    const ComponentMap: any = {
+        home: HomeTab,
+        reports: Reports
+    };
+
+    const tabs = getTabsForUser(getFromLocalStorage('userRole'), HEADER_TABS);
+
+    const renderHeaderTabs = () => {
+        return (
+            <div>
+                {tabs.length > 0 && (
+                    <TabGroup
+                        value={currTab}
+                        handleChange={handleTabChange}
+                        tabHeadingArray={tabs}
+                        variant={'standard'}
+                        centered={true}
+                    >
+                        {tabs.map((item, index) => {
+                            const keyId = index + 1;
+                            const ComponentName = ComponentMap[item.component];
+                            return (
+                                <ComponentName key={keyId} currTab={index} tabTitle={item?.title} id={item?.title} />
+                            );
+                        })}
+                    </TabGroup>
+                )}
             </div>
-            {navigateTab()}
-        </>
+        );
+    };
+
+    return (
+        <Container disableGutters component="main" maxWidth="xl">
+            <DashboardHeader headerTabs={renderHeaderTabs()} profileList={''} />
+        </Container>
     );
 };
-
-export default AdminDashboard;
+export default Dashboard;

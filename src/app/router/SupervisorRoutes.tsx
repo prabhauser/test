@@ -1,5 +1,5 @@
 import { Route, Switch } from 'react-router-dom';
-import Dashboard from '../components/Dashboard/SupervisorDashboard';
+import Dashboard from '../components/Dashboard/index';
 import { paths } from '../constants/paths';
 
 const SupervisorRoutes = () => {

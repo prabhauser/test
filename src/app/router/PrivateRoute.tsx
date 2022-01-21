@@ -8,7 +8,7 @@ interface PrivateRouteProps extends RouteProps {
 }
 
 export default function PrivateRoute({ component: Component, path }: PrivateRouteProps) {
-    const accessToken = getFromLocalStorage('userRole');
+    const accessToken = 'token';
     return (
         <Route
             path={path}
