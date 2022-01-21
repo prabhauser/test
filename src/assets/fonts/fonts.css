@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'PoppinsRegular';
+    font-weight: normal;
+    font-style: normal;
+    src: url(./Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: 'PoppinsMedium';
+    font-style: normal;
+    font-weight: 500;
+    src: url(./Poppins/Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: 'PoppinsSemiBold';
+    font-style: normal;
+    font-weight: 600;
+    src: url(./Poppins/Poppins-SemiBold.ttf);
+}
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
