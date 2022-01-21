@@ -165,7 +165,7 @@ const TabGroup = (props: ComponentProps) => {
                 {children &&
                     children.map((element: any, index: number) => {
                         return (
-                            <TabPanel value={value} index={index} key={element.key || index}>
+                            <TabPanel value={value} index={index} key={element?.key || index}>
                                 {element}
                             </TabPanel>
                         );

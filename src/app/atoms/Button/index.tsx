@@ -39,7 +39,7 @@ const useStyles = makeStyles({
         lineHeight: '25px',
         textAlign: 'right',
         '&.MuiButton-root.Mui-disabled': {
-            backgroundColor: `${defaultTheme.colorCodes.disabledBlue}`,
+            background: `${defaultTheme.colorCodes.disabledBlue}`,
             color: `${defaultTheme.colorCodes.white}`
         }
     },

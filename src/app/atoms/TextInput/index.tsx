@@ -46,17 +46,16 @@ const useStyles = makeStyles({
             alignContent: 'center',
             justifyContent: 'center',
             width: '100%',
-            //todo - style the border of field on focus
+            //style the border of field on focus
             '&.Mui-focused fieldset': {
                 borderWidth: '1.5px',
                 borderColor: `${defaultTheme.colorCodes.darkenGray}`
             }
         },
-        // todo - style the helpertext
+        // style the helpertext
         '& .MuiFormHelperText-root': {
             color: `${defaultTheme.colorCodes.error}`,
             fontSize: '12px',
-            //lineHeight: '18px',
             fontWeight: 500,
             letterSpacing: 0,
             marginTop: '5px',
@@ -70,7 +69,7 @@ const useStyles = makeStyles({
             fontStyle: 'italic'
         }
     },
-    //todo - style the text of field with icon
+    //style the text of field with icon
     inputWithicon: {
         '& .MuiInputBase-input': {
             color: `${defaultTheme.colorCodes.darkGray}`,
@@ -81,7 +80,7 @@ const useStyles = makeStyles({
             marginLeft: '30px'
         }
     },
-    //todo - style the input text of field
+    //style the input text of field
     inputWithoutIcon: {
         '& .MuiInputBase-input': {
             color: `${defaultTheme.colorCodes.darkGray}`,
